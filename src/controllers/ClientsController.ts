@@ -4,14 +4,6 @@ import { ClientDefaulter } from '../models/client';
 
 export class Clients {
   async index(req: Request, res: Response) {
-    // const { date } = req.query;
-
-    // if (!date) {
-    //   return res.status(400).json({
-    //     message: 'Informe a data para consulta no formato (AAAA-MM-DD)'
-    //   });
-    // }
-
     const clients = await ClientDefaulter.find();
 
     if (clients.length > 0) {
